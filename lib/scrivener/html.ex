@@ -162,7 +162,7 @@ defmodule Scrivener.HTML do
   # Semantic UI implementation
   defp _pagination_links(paginator, [view_style: :semantic, path: path, args: args, page_param: page_param, params: params]) do
     url_params = Keyword.drop params, Keyword.keys(@raw_defaults)
-    content_tag :div, class: "ui pagination menu" do
+    content_tag :div, class: "ui pagination right mini menu" do
       raw_pagination_links(paginator, params)
       |> Enum.map(&page(&1, url_params, args, page_param, path, paginator, :semantic))
     end
