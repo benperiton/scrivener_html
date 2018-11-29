@@ -275,6 +275,7 @@ defmodule Scrivener.HTML do
   defp link_classes_for_style(_paginator, _page_number, :bootstrap), do: []
   defp link_classes_for_style(_paginator, _page_number, :bootstrap_v4), do: ["page-link"]
   defp link_classes_for_style(_paginator, _page_number, :foundation), do: []
+  defp link_classes_for_style(_paginator, _page_number, :semantic), do: ["item"]
   defp link_classes_for_style(_paginator, _page_number, :materialize), do: []
   defp link_classes_for_style(paginator, page_number, :bulma) do
     if(paginator.page_number == page_number, do: ["pagination-link", "is-current"], else: ["pagination-link"])
